@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import 'font-awesome/css/font-awesome.min.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
-// import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+// import 'font-awesome/css/font-awesome.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Quotes from './quotes.js';
 
 const quotes = Quotes.quotes;
@@ -51,14 +51,14 @@ class App extends React.Component {
     }
     return (
       <div id="quote-box" style={ { color: color, backgroundColor: bgColor } }>
-        {/* <p id="text"><FontAwesomeIcon icon={faQuoteLeft} /> {this.state.quote}</p> */}
-        <p id="text"><i className="fa fa-quote-left" /> {this.state.quote}</p>
+        {/* <p id="text"><i className="fa fa-quote-left" /> {this.state.quote}</p> */}
+        <p id="text"><FontAwesomeIcon icon={faQuoteLeft} /> {this.state.quote}</p>
         <p id="author">- {this.state.author}</p>
         <div className="buttons">
           <button id="new-quote" onClick={this.handleClick} style={ { color: bgColor, backgroundColor: color } }>New quote</button>
           <a id="tweet-quote" href={tweetHref + this.state.quote + '" ' + this.state.author} target="_blank" style={ { color: bgColor, backgroundColor: color } }>
-            {/* <FontAwesomeIcon icon={ faTwitter } size="2x" /> */}
-            <i className="fa fa-twitter fa-2x"></i>
+            {/* <i className="fa fa-twitter fa-2x"></i> */}
+            <FontAwesomeIcon icon={ faTwitter } size="2x" />
           </a>
         </div>
       </div>
