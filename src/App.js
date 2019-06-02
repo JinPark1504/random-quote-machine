@@ -37,8 +37,8 @@ class App extends React.Component {
       author: quotes.author[index]
     });
     
-    color = "hsl(" + Math.floor(random_number * 255) + ",100%,20%)";
-    bgColor = "hsl(" + Math.floor(random_number * 255) + ",100%,97%)";
+    color = "hsl(" + Math.floor(random_number * 360) + ",100%,20%)";
+    bgColor = "hsl(" + Math.floor(random_number * 360) + ",100%,97%)";
     console.log('color: ' + color);
     body.style.setProperty('background-color', color);
   }
