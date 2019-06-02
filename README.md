@@ -1,6 +1,6 @@
 # Front End Libraries Projects - Build a Random Quote Machine
 
-Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/qRZeGZ.
+Objective: Build a CodePen.io app that is functionally similar to this: [https://codepen.io/freeCodeCamp/full/qRZeGZ](https://codepen.io/freeCodeCamp/full/qRZeGZ).
 
 Fulfill the below user stories and get all of the tests to pass. Give it your own personal style.
 
@@ -91,7 +91,7 @@ Importing object from external JS file to bring data
   const quotes = Quotes.quotes;
   ```
 
-Applying random font-color and backgournd-color
+Applying random font-color and background-color
 
 - On src/App.js
 
