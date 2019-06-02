@@ -20,16 +20,16 @@
   text-align: right;
 }
 
-a {
-  padding: 1.2rem 0.8rem 0.5rem 0.8rem;
+.buttons {
+  margin-top: 2.5rem;
 }
 
-i {
-  margin-top: 2.1rem;
+#tweet-quote {
+  padding: 1.2rem 0.8rem 0.5rem;
 }
 
 button {
-  margin-top: 1.5rem;
+  margin-top: -0.55rem;
   padding: 1rem 1.5rem;
   float: right;
   border: 0;
