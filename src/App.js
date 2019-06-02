@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 // import 'font-awesome/css/font-awesome.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuoteLeft, faTwitter, fa2x } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Quotes from './quotes.js';
 
 const quotes = Quotes.quotes;
@@ -50,11 +51,11 @@ class App extends React.Component {
     }
     return (
       <div id="quote-box" style={ { color: color, backgroundColor: bgColor } }>
-        <p id="text"><FontAwesomeIcon icon="check-square" /> {this.state.quote}</p>
+        <p id="text"><FontAwesomeIcon icon={faQuoteLeft} /> {this.state.quote}</p>
         <p id="author">- {this.state.author}</p>
         <button id="new-quote" onClick={this.handleClick} style={ { color: bgColor, backgroundColor: color } }>New quote</button>
         <a id="tweet-quote"href={tweetHref + this.state.quote + '" ' + this.state.author} target="_blank" style={ { color: bgColor, backgroundColor: color } }>
-         {/* <FontAwesomeIcon icon={ faTwitter } /> */}
+         <FontAwesomeIcon icon={ faTwitter } size="2x" />
         </a>
       </div>
     );
