@@ -56,7 +56,7 @@ class App extends React.Component {
         <p id="author">- {this.state.author}</p>
         <div className="buttons">
           <button id="new-quote" onClick={this.handleClick} style={ { color: bgColor, backgroundColor: color } }>New quote</button>
-          <a id="tweet-quote" href={tweetHref + this.state.quote + '" ' + this.state.author} target="_blank" style={ { color: bgColor, backgroundColor: color } }>
+          <a id="tweet-quote" href={tweetHref + this.state.quote + '" ' + this.state.author} target="_blank" rel="noopener noreferrer" style={ { color: bgColor, backgroundColor: color } }>
             {/* <i className="fa fa-twitter fa-2x"></i> */}
             <FontAwesomeIcon icon={ faTwitter } size="2x" />
           </a>
