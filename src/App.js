@@ -11,6 +11,7 @@ const quotes = Quotes.quotes;
 let index = 0,
     color = '',
     bgColor = '',
+    footerColor = '',
     tweetHref = 'https://twitter.com/intent/tweet?hashtags=quotes&text="';
 
 class App extends React.Component {
@@ -39,6 +40,7 @@ class App extends React.Component {
     
     color = "hsl(" + Math.floor(random_number * 360) + ",100%,20%)";
     bgColor = "hsl(" + Math.floor(random_number * 360) + ",100%,97%)";
+    footerColor = "hsl(" + Math.floor(random_number * 360) + ",100%,80%)";
     console.log('color: ' + color);
     body.style.setProperty('background-color', color);
   }
@@ -50,17 +52,25 @@ class App extends React.Component {
       this.random_quote();
     }
     return (
-      <div id="quote-box" style={ { color: color, backgroundColor: bgColor } }>
-        {/* <p id="text"><i className="fa fa-quote-left" /> {this.state.quote}</p> */}
-        <p id="text"><FontAwesomeIcon icon={faQuoteLeft} /> {this.state.quote}</p>
-        <p id="author">- {this.state.author}</p>
-        <div className="buttons">
-          <button id="new-quote" onClick={this.handleClick} style={ { color: bgColor, backgroundColor: color } }>New quote</button>
-          <a id="tweet-quote" href={tweetHref + this.state.quote + '" ' + this.state.author} target="_blank" rel="noopener noreferrer" style={ { color: bgColor, backgroundColor: color } }>
-            {/* <i className="fa fa-twitter fa-2x"></i> */}
-            <FontAwesomeIcon icon={ faTwitter } size="2x" />
-          </a>
-        </div>
+      <div id="container">
+        <header>
+          <h1 style={ { color: bgColor} }>Random Quote</h1>
+        </header>
+        <article style={ { color: color, backgroundColor: bgColor } }>
+          {/* <p id="text"><i className="fa fa-quote-left" /> {this.state.quote}</p> */}
+          <p id="text"><FontAwesomeIcon icon={faQuoteLeft} /> {this.state.quote}</p>
+          <p id="author">- {this.state.author}</p>
+          <div className="buttons">
+            <button id="new-quote" onClick={this.handleClick} style={ { color: bgColor, backgroundColor: color } }>New quote</button>
+            <a id="tweet-quote" href={tweetHref + this.state.quote + '" ' + this.state.author} target="_blank" rel="noopener noreferrer" style={ { color: bgColor, backgroundColor: color } }>
+              {/* <i className="fa fa-twitter fa-2x"></i> */}
+              <FontAwesomeIcon icon={ faTwitter } size="2x" />
+            </a>
+          </div>
+        </article>
+        <footer>
+          <p style={ { color: footerColor} }>Designed and Coded by <b>Jin Park</b></p>
+        </footer>
       </div>
     );
   }
