@@ -45,6 +45,11 @@ header, article {
   #text {
     font-size: 2rem;
   }
+  header, article {
+    width: 30rem;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+  }
 }
 
 #author {
